@@ -1,0 +1,48 @@
+name: MERN CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install server dependencies
+        run: |
+          cd server
+          npm install
+
+      - name: Install client dependencies
+        run: |
+          cd client
+          npm install
+
+      - name: Run backend tests
+        run: |
+          cd server
+          npm test
+
+      - name: Run frontend tests
+        run: |
+          cd client
+          npm test
+
+      - name: Build frontend
+        run: |
+          cd client
+          npm run build
+
+      - name: Deploy backend (example for Render)
+        run: echo "Deploy backend manually or via Render CLI"
+
+      - name: Deploy frontend (example for Vercel)
+        run: echo "Deploy frontend manually or via Vercel CLI"
