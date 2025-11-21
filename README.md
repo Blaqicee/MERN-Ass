@@ -13,9 +13,7 @@ This project is a fully deployed MERN stack application with CI/CD and monitorin
    - Server: `npm run dev`
    - Client: `npm run dev`
 
-## Deployment URLs
-- Frontend: [Your Vercel/Netlify URL]
-- Backend: [Your Render/Railway/Heroku URL]
+
 
 ## Features
 - Full MERN stack integration
