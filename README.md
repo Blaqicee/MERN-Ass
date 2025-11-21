@@ -13,6 +13,10 @@ This project is a fully deployed MERN stack application with CI/CD and monitorin
    - Server: `npm run dev`
    - Client: `npm run dev`
 
+## Deployment URLs
+- Frontend: (http://localhost:5173)
+- Backend: (http://localhost:5000)
+
 
 
 ## Features
